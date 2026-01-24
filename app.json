@@ -29,6 +29,7 @@
       "expo-router",
       [
         "expo-splash-screen",
+
         {
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 200,
@@ -37,6 +38,13 @@
           "dark": {
             "backgroundColor": "#000000"
           }
+        }
+      ],
+      [
+        "expo-secure-store",
+        {
+          "configureAndroidBackup": true,
+          "faceIDPermission": "Allow Gronur to access your Face ID biometric data."
         }
       ]
     ],
