@@ -71,4 +71,18 @@ export const typography = {
   backgroundColor: {
     color: "#EEEEEE",
   },
+  mainScreen: {
+    flex: 1,
+  },
+  mainScreenSafeView: {
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+  },
+  mainScreenBannerStyle: {
+    flex: 1,
+    backgroundColor: "white",
+    marginBottom: 16,
+    borderBottomLeftRadius: 60,
+    borderBottomRightRadius: 60,
+  },
 } as const;

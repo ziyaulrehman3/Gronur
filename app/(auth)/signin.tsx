@@ -76,7 +76,7 @@ export default function Signin() {
     ) {
       rememberMe();
       console.log("SingFUnction CLick");
-      router.replace("/(app)/home");
+      router.replace("/(app)/(home)/home");
     } else {
       console.log("EMail or PAssowrd Wring CLick");
       setPasswordWrong(true);

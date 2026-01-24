@@ -14,7 +14,7 @@ export const SocialLogins = memo(() => {
         ],
       });
 
-      router.replace("/(app)/home");
+      router.replace("/(app)/(home)/home");
     } catch (err) {
       console.log("Apple Login Faild", err);
     }
