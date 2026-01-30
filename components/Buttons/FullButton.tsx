@@ -82,15 +82,23 @@ export function IconFullButton({
   );
 }
 
-export const SearchButtonInput = memo(() => {
-  return (
-    <View style={[style.fullButton, style.searchButton]}>
-      <Search color={typography.primaryColor.color} size={28} />
-      <TextInput style={[style.searchButtonInput]} />
-      <Settings2 color={typography.primaryColor.color} size={28} />
-    </View>
-  );
-});
+export const SearchButtonInput = memo(
+  ({
+    setFilterOpen,
+  }: {
+    setFilterOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  }) => {
+    return (
+      <View style={[style.fullButton, style.searchButton]}>
+        <Search color={typography.primaryColor.color} size={28} />
+        <TextInput style={[style.searchButtonInput]} />
+        <Pressable onPress={() => setFilterOpen(true)}>
+          <Settings2 color={typography.primaryColor.color} size={28} />
+        </Pressable>
+      </View>
+    );
+  },
+);
 
 const style = StyleSheet.create({
   fullButton: {
