@@ -2,6 +2,7 @@ import { typography } from "@/constants/theme";
 import { useRouter } from "expo-router";
 import { ArrowLeft } from "lucide-react-native";
 import { Pressable, StyleSheet } from "react-native";
+
 export const BackButtonLight = () => {
   const router = useRouter();
 
@@ -10,7 +11,7 @@ export const BackButtonLight = () => {
   };
 
   return (
-    <Pressable style={style.BackButtonLight} onPress={goBack}>
+    <Pressable style={[style.BackButtonLight]} onPress={goBack}>
       <ArrowLeft size={32} color={typography.primaryColor.color} />
     </Pressable>
   );

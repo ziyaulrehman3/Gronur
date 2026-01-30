@@ -68,21 +68,58 @@ export const typography = {
   secondaryColor: {
     color: "#C1C7D0",
   },
+  miniColor: {
+    color: "#ff7034",
+  },
   backgroundColor: {
     color: "#EEEEEE",
   },
   mainScreen: {
     flex: 1,
   },
+  mainScreenBg: {
+    backgroundColor: "#344d7f",
+  },
   mainScreenSafeView: {
     paddingVertical: 10,
     paddingHorizontal: 20,
+    flex: 1,
   },
   mainScreenBannerStyle: {
     flex: 1,
     backgroundColor: "white",
-    marginBottom: 16,
+    // paddingBottom: 16,
     borderBottomLeftRadius: 60,
     borderBottomRightRadius: 60,
+  },
+  upperRoundSafeView: {
+    flex: 1,
+  },
+  upperRoundScreen: {
+    backgroundColor: "white",
+    flex: 1,
+    padding: 10,
+    borderTopRightRadius: 60,
+    borderTopLeftRadius: 60,
+    overflow: "hidden",
+  },
+  backButtonWraper: {
+    position: "absolute",
+    top: 1,
+    left: 10,
+  },
+  headingMD: {
+    fontSize: 24,
+    fontWeight: "bold",
+    color: "#344d7f",
+  },
+  headingLG: {
+    fontSize: 32,
+    fontWeight: "bold",
+    color: "#344d7f",
+  },
+  textSM: {
+    fontSize: 18,
+    color: "#C1C7D0",
   },
 } as const;

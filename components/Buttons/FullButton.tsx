@@ -1,10 +1,14 @@
 import { typography } from "@/constants/theme";
+import { Search, Settings2 } from "lucide-react-native";
+import { memo } from "react";
 import {
   Image,
   ImageSourcePropType,
   Pressable,
   StyleSheet,
   Text,
+  TextInput,
+  View,
 } from "react-native";
 
 export function FullButton({
@@ -78,6 +82,16 @@ export function IconFullButton({
   );
 }
 
+export const SearchButtonInput = memo(() => {
+  return (
+    <View style={[style.fullButton, style.searchButton]}>
+      <Search color={typography.primaryColor.color} size={28} />
+      <TextInput style={[style.searchButtonInput]} />
+      <Settings2 color={typography.primaryColor.color} size={28} />
+    </View>
+  );
+});
+
 const style = StyleSheet.create({
   fullButton: {
     height: 50,
@@ -85,9 +99,23 @@ const style = StyleSheet.create({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    paddingHorizontal: 20,
   },
   textMedium: {
     fontSize: 20,
     fontWeight: "semibold",
+  },
+  searchButton: {
+    marginHorizontal: 20,
+    backgroundColor: "white",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    gap: 4,
+    marginBottom: 20,
+  },
+  searchButtonInput: {
+    flex: 1,
+    height: "100%",
+    fontSize: 18,
   },
 });

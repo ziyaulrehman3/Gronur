@@ -1,9 +1,13 @@
-import { TopHeading } from "@/components/App/TopHeading";
+import { CategortBar } from "@/components/App/CategoryBar";
+import { ItemScreen } from "@/components/App/Item";
+import { TopHeading, TopHeadingWithButton } from "@/components/App/TopHeading";
 import { typography } from "@/constants/theme";
-import { Text, View } from "react-native";
+import { useState } from "react";
+import { View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-
 export default function Home() {
+  const [category, setCategory] = useState("vegitable");
+
   return (
     <View
       style={[
@@ -17,10 +21,20 @@ export default function Home() {
           style={[
             {
               ...typography.mainScreenSafeView,
+              flex: 1,
+              gap: 12,
             },
-          ]}>
+          ]}
+          edges={["top"]}>
           <TopHeading screen={"home"} />
-          <Text>Home Screen</Text>
+          <CategortBar
+            category={category}
+            setCategory={setCategory}
+            type="products"
+          />
+          <TopHeadingWithButton heading={category} text="See all" />
+
+          <ItemScreen screen="home" category={category} />
         </SafeAreaView>
       </View>
     </View>

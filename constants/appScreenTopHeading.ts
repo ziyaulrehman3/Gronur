@@ -3,12 +3,12 @@ export const appScreenTopHeading = {
     title: "Daily\nGrocery Food",
   },
   orders: {
-    title: "Daily Grocery Food",
+    title: "Daily\nGrocery Food",
   },
   cart: {
-    title: "Daily Grocery Food",
+    title: "Daily\nGrocery Food",
   },
   more: {
-    title: "Daily Grocery Food",
+    title: "Daily\nGrocery Food",
   },
 } as const;
